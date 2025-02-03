@@ -1,116 +1,159 @@
-*{
+* {
     padding: 0;
     margin: 0;
-    box-sizing:border-box ;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-.box{
+
+body {
+background-color: white;
+overflow-x: hidden;
+}
+
+.box {
     height: 80vh;
-    background-color: rgb(243, 243, 243);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    background-color: rgb(230, 229, 229);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 28px;
-
+    
 }
-.main{
-    height: 366px;
-    width: 410px;
+
+.main {
+    width: 100%;
+    max-width: 410px;
     background-color: white;
     position: relative;
-    top: 15%;
-    left:58%;
     border-radius: 10px;
     box-shadow: 8px 8px 15px rgb(187, 187, 187);
-    display: block;
-    justify-content: center;
-  
-
-}
-.main input{
-    height: 15%;
-    width: 90%;
-    margin: 3%;
-    margin-left: 5%;
-    border-radius: 10px;
-    margin-bottom: 1.5%;
     padding: 10px;
-    font-size: 18px;
-    
-    border: 1px solid rgb(192, 192, 192);
-    
-    
+    box-sizing: border-box;
+    text-align: center;
+    left: 25px;
     
 }
-input::placeholder{
+
+input, .log, .new {
+    width: 90%;
+    height: 40px;
+    margin: 10px 0;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid rgb(192, 192, 192);
+}
+
+input::placeholder {
     color: rgb(204, 204, 204);
     font-size: 16px;
 }
-.text{
-   
-    position: absolute;
-    top: 25%;
-    text-align: justify;
-    left: 10%;
-  
+
+.log {
+    background-color: rgb(43, 122, 240);
+    color: white;
+    font-weight: bold;
+    border: none;
+    width: 90%;
 }
-.unique{
+
+a {
+    font-size: 14px;
+    text-decoration: none;
+    color: rgb(43, 122, 240);
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.new {
+    background-color: rgb(60, 179, 44);
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+    width: 50%;
+}
+
+.spac {
+    background-color: grey;
+    margin: 15px 0;
+}
+
+.footer {
+    background-color: white;
+    font-size: 14px;
+    color: rgb(139, 139, 139);
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.unique {
     font-size: 60px;
     font-weight: bold;
     color: rgb(8, 123, 231);
+    text-align: center;
+    margin-bottom: 20px;
 }
-.log{
-    height: 15%;
-    width: 90%;
-    border: none;
-    border-radius: 10px;
-    background-color: rgb(43, 122, 240);
-    color: white;
-    margin: 5%;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 2%;
-}
-.spac{
-    background-color: grey;
-    margin: 3%;
-    position: relative;
-    top: 5px;
-}
-a{
-    font-size: 14px;
-    position: relative;
-    left: 35%;
-    color: rgb(43, 122, 240) ;
-    text-decoration: none;
-}
-a:hover{
-    text-decoration: underline;
 
-}
-.new{
-    height: 14%;
-    width: 45%;
-    border-radius: 8px;
-    border: none;
-    background-color: rgb(60, 179, 44);
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    position: relative;
-    left: 30%;
-    top: 7px;
-}
-.footer{
-    width: 90%;
-    
-    font-size: 14px;
-    color: rgb(139, 139, 139);
-    position: relative;
-    left:5%;
-    top: 16px;
-    
-    padding: 15px;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .box{
+    flex-wrap: wrap;
+    }
+    .main {
+        width: 80%;
+        padding: 15px;
+        position: relative;
+        left: 0;
+        
+       
+    }
 
+    .unique {
+        font-size: 40px;
+    }
+
+    input, .log, .new {
+        font-size: 16px;
+    }
+
+    .footer p {
+        font-size: 10px;
+    }
 }
-.one{
-    padding: 8px;
+
+@media (max-width: 480px) {
+    .main {
+        width: 90%;
+        padding: 10px;
+        
+    }
+
+    .unique {
+        font-size: 30px;
+    }
+
+    input, .log, .new {
+        font-size: 14px;
+    }
+
+    .footer p {
+        font-size: 10px;
+    }
+
+    .box {
+        height: 100vh;
+        padding: 20px;
+    }
 }
